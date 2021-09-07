@@ -22,13 +22,14 @@ code {
   margin:2rem auto;
 }
 .searchFeield{
-  width: 100%;
-  max-width: 100%;
+  width: 80%;
+  max-width: 80%;
   padding: 0.3rem;
   border-radius: 13px;
   border: 1px solid black;
   box-shadow: 2px;
   box-shadow: 2px 4px 5px #888888;
+  outline:none;
 }
 .bookList tbody{
   border-width:1px;
@@ -36,4 +37,14 @@ code {
 .bookList{
  
   margin-top: 3rem;
+}
+.container button{
+  border-radius: 15px;
+  margin-left: 5px;
+  border: 1px soild black;
+  border-width: 1px;
+}
+.loader{
+  margin-top: 2rem;
+  
 }
