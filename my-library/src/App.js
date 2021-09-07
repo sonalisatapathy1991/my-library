@@ -59,12 +59,19 @@ function App() {
     arrayCopyBooks.sort(compareBy(key, ascending));
     setBookList(arrayCopyBooks)
   }
-  console.log('myDAta', bookList.length)
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      allBookLists();
+    }
+  }
+
+  //console.log('myDAta', bookList.length)
   return (
     <Container>
       <Row>
         <Col xs={{ span: 6, offset: 3 }}>
-          <input type="text" ref={inputRef} placeholder="Search book title" defaultValue={searchTitle || ''} className="searchFeield" onChange={e => updateSearch(e)} />
+          <input type="text" ref={inputRef} id="searchBook" onKeyDown={handleKeyDown} placeholder="Search book title" defaultValue={searchTitle || ''} className="searchFeield" onChange={e => updateSearch(e)} />
           <button onClick={allBookLists}>Search</button>
         </Col>
       </Row>
